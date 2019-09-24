@@ -22,7 +22,7 @@ public class TestEntity
 	{
 		Name("Name"),
 		SomeInteger("SomeInteger"),
-		SomeDecimal("SomeDecimal");
+		ReadOnly("ReadOnly");
 
 		private java.lang.String metaName;
 
@@ -190,39 +190,39 @@ public class TestEntity
 	}
 
 	/**
-	 * @return value of SomeDecimal
+	 * @return value of ReadOnly
 	 */
-	public final java.math.BigDecimal getSomeDecimal()
+	public final java.lang.Boolean getReadOnly()
 	{
-		return getSomeDecimal(getContext());
+		return getReadOnly(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of SomeDecimal
+	 * @return value of ReadOnly
 	 */
-	public final java.math.BigDecimal getSomeDecimal(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.Boolean getReadOnly(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.math.BigDecimal) getMendixObject().getValue(context, MemberNames.SomeDecimal.toString());
+		return (java.lang.Boolean) getMendixObject().getValue(context, MemberNames.ReadOnly.toString());
 	}
 
 	/**
-	 * Set value of SomeDecimal
-	 * @param somedecimal
+	 * Set value of ReadOnly
+	 * @param readonly
 	 */
-	public final void setSomeDecimal(java.math.BigDecimal somedecimal)
+	public final void setReadOnly(java.lang.Boolean readonly)
 	{
-		setSomeDecimal(getContext(), somedecimal);
+		setReadOnly(getContext(), readonly);
 	}
 
 	/**
-	 * Set value of SomeDecimal
+	 * Set value of ReadOnly
 	 * @param context
-	 * @param somedecimal
+	 * @param readonly
 	 */
-	public final void setSomeDecimal(com.mendix.systemwideinterfaces.core.IContext context, java.math.BigDecimal somedecimal)
+	public final void setReadOnly(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean readonly)
 	{
-		getMendixObject().setValue(context, MemberNames.SomeDecimal.toString(), somedecimal);
+		getMendixObject().setValue(context, MemberNames.ReadOnly.toString(), readonly);
 	}
 
 	/**

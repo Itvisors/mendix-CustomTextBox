@@ -12,7 +12,7 @@ export const styles: any = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 5
     },
-    readOnly: {
+    readonlyInput: {
         // This is not optimal, need to merge objects when assigning them to the React component but I'm missing something here...
         flex: 1,
         padding: 15,

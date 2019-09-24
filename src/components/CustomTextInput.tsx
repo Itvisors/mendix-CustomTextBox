@@ -13,22 +13,17 @@ export interface InputProps {
 
 const defaultTextInputStyle: CustomTextBoxStyle = {
     container: styles.flex,
-    input: styles.input
-};
-
-const readOnlyTextInputStyle: CustomTextBoxStyle = {
-    container: styles.flex,
-    input: styles.readOnly
+    input: styles.input,
+    readonlyInput: styles.readonlyInput
 };
 
 export class CustomTextInput extends Component<InputProps> {
     private readonly styles = flattenStyles(defaultTextInputStyle, this.props.style);
-    private readonly readOnlyStyles = flattenStyles(readOnlyTextInputStyle, this.props.style);
     render(): ReactNode {
         return (
             <View style={this.styles.container}>
                 <TextInput 
-                    style={this.props.editable ? this.styles.input : this.readOnlyStyles.input}
+                    style={this.props.editable ? this.styles.input : this.styles.readonlyInput}
                     value={this.props.value}
                     editable={this.props.editable}
                     onChangeText={this.props.onUpdate}
