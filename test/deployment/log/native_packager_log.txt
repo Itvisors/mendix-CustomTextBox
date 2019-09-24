@@ -1,0 +1,48 @@
+C:\Program Files\Mendix\8.1.1.58432\modeler\tools\node\node.exe "C:\Program Files\Mendix\8.1.1.58432\modeler\tools\node\node_modules\react-native\local-cli\cli.js" start --port "8083" --config "C:\Users\marcel\Documents\GitHub\mendix-CustomTextBox\test\deployment\native\metro.config.json" --reactNativePath "C:\Program Files\Mendix\8.1.1.58432\modeler\tools\node\node_modules\react-native" 
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+│  Running Metro Bundler on port 8083.                                         │
+│                                                                              │
+│  Keep Metro running while developing on any JS projects. Feel free to        │
+│  close this tab and run your own Metro instance if you prefer.               │
+│                                                                              │
+│  https://github.com/facebook/react-native                                    │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Looking for JS files in
+   C:\Users\marcel\Documents\GitHub\mendix-CustomTextBox\test\deployment\native
+   C:/Users/marcel/Documents/GitHub/mendix-CustomTextBox/test/theme
+   C:/Program Files/Mendix/8.1.1.58432/modeler/tools/node/node_modules 
+
+Loading dependency graph, done.
+ BUNDLE  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (843/843), done.
+
+ BUNDLE  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ BUNDLE  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+info Launching Dev Tools...
+ DELTA  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ MAP  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ BUNDLE  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ DELTA  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ MAP  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ BUNDLE  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ DELTA  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ MAP  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ BUNDLE  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ BUNDLE  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
+ BUNDLE  [ios, dev] ./index.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 100.0% (1/1), done.
+
