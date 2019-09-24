@@ -13,9 +13,7 @@
             <description></description>
             <attributeTypes>
                 <attributeType name="String" />
-                <attributeType name="Decimal" />
                 <attributeType name="Integer" />
-                <attributeType name="Long" />
             </attributeTypes>
         </property>
 
