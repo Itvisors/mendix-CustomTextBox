@@ -1,5 +1,5 @@
 import { Component, ReactNode, createElement } from "react";
-import { TextStyle, ViewStyle } from "react-native";
+import { TextStyle, ViewStyle, KeyboardType } from "react-native";
 import { CustomTextBoxProps } from "../typings/CustomTextBoxProps";
 import { Style } from "./utils/common";
 import { CustomTextInput } from "./components/CustomTextInput";
@@ -15,8 +15,17 @@ export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxSty
     private readonly onUpdateHandle = this.onUpdate.bind(this);
     render(): ReactNode {
         let value;
+        let keyboardType: KeyboardType = "default";
         if (this.props.dataAttr.status == ValueStatus.Available) {
             value = this.props.dataAttr.displayValue || "";
+            switch (this.props.keyboardType) {
+                case "numeric":
+                    keyboardType = "numeric";
+                    break;
+                case "emailAddress":
+                    keyboardType = "email-address";
+                    break;
+            }
         } else {
             value = "";
         }
@@ -26,6 +35,7 @@ export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxSty
                 value={value}
                 style={this.props.style}
                 editable={editable}
+                keyboardType={keyboardType}
                 onUpdate={this.onUpdateHandle}
             />
         );

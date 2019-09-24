@@ -21,7 +21,8 @@ public class TestEntity
 	public enum MemberNames
 	{
 		Name("Name"),
-		SomeInteger("SomeInteger"),
+		NumberString("NumberString"),
+		EmailAddress("EmailAddress"),
 		ReadOnly("ReadOnly");
 
 		private java.lang.String metaName;
@@ -154,39 +155,75 @@ public class TestEntity
 	}
 
 	/**
-	 * @return value of SomeInteger
+	 * @return value of NumberString
 	 */
-	public final java.lang.String getSomeInteger()
+	public final java.lang.String getNumberString()
 	{
-		return getSomeInteger(getContext());
+		return getNumberString(getContext());
 	}
 
 	/**
 	 * @param context
-	 * @return value of SomeInteger
+	 * @return value of NumberString
 	 */
-	public final java.lang.String getSomeInteger(com.mendix.systemwideinterfaces.core.IContext context)
+	public final java.lang.String getNumberString(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.SomeInteger.toString());
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.NumberString.toString());
 	}
 
 	/**
-	 * Set value of SomeInteger
-	 * @param someinteger
+	 * Set value of NumberString
+	 * @param numberstring
 	 */
-	public final void setSomeInteger(java.lang.String someinteger)
+	public final void setNumberString(java.lang.String numberstring)
 	{
-		setSomeInteger(getContext(), someinteger);
+		setNumberString(getContext(), numberstring);
 	}
 
 	/**
-	 * Set value of SomeInteger
+	 * Set value of NumberString
 	 * @param context
-	 * @param someinteger
+	 * @param numberstring
 	 */
-	public final void setSomeInteger(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String someinteger)
+	public final void setNumberString(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String numberstring)
 	{
-		getMendixObject().setValue(context, MemberNames.SomeInteger.toString(), someinteger);
+		getMendixObject().setValue(context, MemberNames.NumberString.toString(), numberstring);
+	}
+
+	/**
+	 * @return value of EmailAddress
+	 */
+	public final java.lang.String getEmailAddress()
+	{
+		return getEmailAddress(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of EmailAddress
+	 */
+	public final java.lang.String getEmailAddress(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.EmailAddress.toString());
+	}
+
+	/**
+	 * Set value of EmailAddress
+	 * @param emailaddress
+	 */
+	public final void setEmailAddress(java.lang.String emailaddress)
+	{
+		setEmailAddress(getContext(), emailaddress);
+	}
+
+	/**
+	 * Set value of EmailAddress
+	 * @param context
+	 * @param emailaddress
+	 */
+	public final void setEmailAddress(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String emailaddress)
+	{
+		getMendixObject().setValue(context, MemberNames.EmailAddress.toString(), emailaddress);
 	}
 
 	/**

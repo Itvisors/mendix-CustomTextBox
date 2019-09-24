@@ -1,5 +1,5 @@
 import { Component, ReactNode, createElement } from 'react';
-import { TextInput, View } from 'react-native';
+import { TextInput, View, KeyboardType } from 'react-native';
 import { CustomTextBoxStyle } from '../CustomTextBox';
 import { flattenStyles } from '../utils/common';
 import { styles } from '../ui/styles';
@@ -8,6 +8,7 @@ export interface InputProps {
     value: string;
     style: CustomTextBoxStyle[];
     editable: boolean;
+    keyboardType: KeyboardType;
     onUpdate: (value: string) => void;
 }
 
@@ -25,6 +26,7 @@ export class CustomTextInput extends Component<InputProps> {
                 <TextInput 
                     style={this.props.editable ? this.styles.input : this.styles.readonlyInput}
                     value={this.props.value}
+                    keyboardType={this.props.keyboardType}
                     editable={this.props.editable}
                     onChangeText={this.props.onUpdate}
                 />

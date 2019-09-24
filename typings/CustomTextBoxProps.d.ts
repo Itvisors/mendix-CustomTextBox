@@ -10,6 +10,9 @@ interface CommonProps<Style> {
     style: Style[];
 }
 
+export type KeyboardTypeEnum = "default" | "numeric" | "emailAddress";
+
 export interface CustomTextBoxProps<Style> extends CommonProps<Style> {
-    dataAttr: EditableValue<string | BigJs.Big>;
+    dataAttr: EditableValue<string>;
+    keyboardType: KeyboardTypeEnum;
 }
