@@ -9,6 +9,7 @@ export interface InputProps {
     style: CustomTextBoxStyle[];
     editable: boolean;
     keyboardType: KeyboardType;
+    showAsPassword: boolean;
     onUpdate: (value: string) => void;
 }
 
@@ -28,6 +29,7 @@ export class CustomTextInput extends Component<InputProps> {
                     value={this.props.value}
                     keyboardType={this.props.keyboardType}
                     editable={this.props.editable}
+                    secureTextEntry={this.props.showAsPassword}
                     onChangeText={this.props.onUpdate}
                 />
             </View>

@@ -36,6 +36,7 @@ export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxSty
                 style={this.props.style}
                 editable={editable}
                 keyboardType={keyboardType}
+                showAsPassword={this.props.showAsPassword}
                 onUpdate={this.onUpdateHandle}
             />
         );

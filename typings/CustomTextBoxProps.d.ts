@@ -15,4 +15,5 @@ export type KeyboardTypeEnum = "default" | "numeric" | "emailAddress";
 export interface CustomTextBoxProps<Style> extends CommonProps<Style> {
     dataAttr: EditableValue<string>;
     keyboardType: KeyboardTypeEnum;
+    showAsPassword: boolean;
 }
