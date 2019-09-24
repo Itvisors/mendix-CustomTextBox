@@ -1,9 +1,0 @@
-Buildfile: C:\Users\marcel\Documents\GitHub\mendix-CustomTextBox\test\deployment\build_core.xml
-
-deploy:
-     [copy] Copying 25 files to C:\Users\marcel\Documents\GitHub\mendix-CustomTextBox\test\deployment
-
-BUILD SUCCESSFUL
-Total time: 0 seconds
-
-
