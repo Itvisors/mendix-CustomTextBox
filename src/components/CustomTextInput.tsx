@@ -29,6 +29,7 @@ export class CustomTextInput extends Component<InputProps> {
                     value={this.props.value}
                     keyboardType={this.props.keyboardType}
                     editable={this.props.editable}
+                    clearButtonMode={"while-editing"}
                     secureTextEntry={this.props.showAsPassword}
                     onChangeText={this.props.onUpdate}
                 />
