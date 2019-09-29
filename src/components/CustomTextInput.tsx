@@ -8,6 +8,7 @@ export interface InputProps {
     value: string;
     style: CustomTextBoxStyle[];
     editable: boolean;
+    hasError: boolean;
     keyboardType: KeyboardType;
     showAsPassword: boolean;
     onUpdate: (value: string) => void;
@@ -17,7 +18,8 @@ const defaultTextInputStyle: CustomTextBoxStyle = {
     container: styles.flex,
     input: styles.input,
     inputDisabled: styles.inputDisabled,
-    inputError: styles.inputError
+    inputError: styles.inputError,
+    validationMessage: styles.validationMessage
 };
 
 export class CustomTextInput extends Component<InputProps> {
@@ -28,6 +30,9 @@ export class CustomTextInput extends Component<InputProps> {
             inputStyle = this.styles.input;
         } else {
             inputStyle = {...this.styles.input, ...this.styles.inputDisabled };
+        }
+        if (this.props.hasError) {
+            inputStyle = {...inputStyle, ...this.styles.inputError };
         }
         return (
             <View style={this.styles.container}>

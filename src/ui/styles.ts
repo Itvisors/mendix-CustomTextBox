@@ -10,13 +10,17 @@ export const styles: any = StyleSheet.create({
         fontSize: 17.5,
         borderColor: "#cdcdcd", 
         borderWidth: 1,
-        borderRadius: 5
+        borderRadius: 5,
+        color: "#000000"
     },
     inputDisabled: {
         backgroundColor: "#f3f3f3"
     },
     inputError: {
         borderColor: "#ed1c24", 
+        color: "#ed1c24"
+    },
+    validationMessage: {
         color: "#ed1c24"
     }
 });
