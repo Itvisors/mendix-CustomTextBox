@@ -4,8 +4,7 @@ export const customTextBoxTestStyle = {
     input: {
         borderColor: "blue"
     },
-    readonlyInput: {
-        borderColor: "blue",
+    inputDisabled: {
         backgroundColor: "#00BFFF"
     }
 }

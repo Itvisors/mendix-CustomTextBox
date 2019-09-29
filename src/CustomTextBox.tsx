@@ -8,7 +8,8 @@ import { ValueStatus } from "mendix";
 export interface CustomTextBoxStyle extends Style {
     container: ViewStyle;
     input: TextStyle;
-    readonlyInput: TextStyle;
+    inputDisabled: TextStyle;
+    inputError: TextStyle;
 }
 
 export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxStyle>> {
