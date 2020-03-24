@@ -47,7 +47,7 @@ export class CustomTextInput extends Component<InputProps> {
                     textContentType={"none"}
                     editable={this.props.editable}
                     multiline={this.props.multiLine}
-                    numberOfLines={this.props.numberOfLines}
+                    numberOfLines={this.props.multiLine ? this.props.numberOfLines : 1}
                     clearButtonMode={"while-editing"}
                     secureTextEntry={this.props.showAsPassword}
                     onChangeText={this.props.onUpdate}

@@ -10,6 +10,7 @@ export const styles: any = StyleSheet.create({
         flexDirection: "row"
     },
     input: {
+        textAlignVertical: "top",
         flex: 1,
         padding: 15,
         fontSize: 17.5,
