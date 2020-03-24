@@ -7,8 +7,12 @@
                 "description": "The spacing above this element.",
                 "options": [
                     {
+                        "name": "Smallest",
+                        "class": "spacingOuterTopSmallest"
+                    },
+                    {
                         "name": "Small",
-                        "class": "spacingOuterTop"
+                        "class": "spacingOuterTopSmaller"
                     },
                     {
                         "name": "Medium",
@@ -16,19 +20,26 @@
                     },
                     {
                         "name": "Large",
-                        "class": "spacingOuterTopLarge"
+                        "class": "spacingOuterTopLarger"
+                    },
+                    {
+                        "name": "Largest",
+                        "class": "spacingOuterTopLargest"
                     }
                 ]
             },
-
             {
                 "name": "Spacing bottom",
                 "type": "Dropdown",
                 "description": "The spacing below this element.",
                 "options": [
                     {
+                        "name": "Smallest",
+                        "class": "spacingOuterBottomSmallest"
+                    },
+                    {
                         "name": "Small",
-                        "class": "spacingOuterBottom"
+                        "class": "spacingOuterBottomSmaller"
                     },
                     {
                         "name": "Medium",
@@ -36,19 +47,26 @@
                     },
                     {
                         "name": "Large",
-                        "class": "spacingOuterBottomLarge"
+                        "class": "spacingOuterBottomLarger"
+                    },
+                    {
+                        "name": "Largest",
+                        "class": "spacingOuterBottomLargest"
                     }
                 ]
             },
-
             {
                 "name": "Spacing left",
                 "type": "Dropdown",
                 "description": "The spacing to the left of this element.",
                 "options": [
                     {
+                        "name": "Smallest",
+                        "class": "spacingOuterLeftSmallest"
+                    },
+                    {
                         "name": "Small",
-                        "class": "spacingOuterLeft"
+                        "class": "spacingOuterLeftSmaller"
                     },
                     {
                         "name": "Medium",
@@ -56,19 +74,26 @@
                     },
                     {
                         "name": "Large",
-                        "class": "spacingOuterLeftLarge"
+                        "class": "spacingOuterLeftLarger"
+                    },
+                    {
+                        "name": "Largest",
+                        "class": "spacingOuterLeftLargest"
                     }
                 ]
             },
-
             {
                 "name": "Spacing right",
                 "type": "Dropdown",
                 "description": "The spacing to the right of this element.",
                 "options": [
                     {
+                        "name": "Smallest",
+                        "class": "spacingOuterRightSmallest"
+                    },
+                    {
                         "name": "Small",
-                        "class": "spacingOuterRight"
+                        "class": "spacingOuterRightSmaller"
                     },
                     {
                         "name": "Medium",
@@ -76,12 +101,15 @@
                     },
                     {
                         "name": "Large",
-                        "class": "spacingOuterRightLarge"
+                        "class": "spacingOuterRightLarger"
+                    },
+                    {
+                        "name": "Largest",
+                        "class": "spacingOuterRightLargest"
                     }
                 ]
             }
         ],
-
         "DivContainer": [
             {
                 "name": "Spacing top",
@@ -90,7 +118,7 @@
                 "options": [
                     {
                         "name": "Inner small",
-                        "class": "spacingInnerTop"
+                        "class": "spacingInnerTopSmaller"
                     },
                     {
                         "name": "Inner medium",
@@ -98,11 +126,11 @@
                     },
                     {
                         "name": "Inner large",
-                        "class": "spacingInnerTopLarge"
+                        "class": "spacingInnerTopLarger"
                     },
                     {
                         "name": "Outer small",
-                        "class": "spacingOuterTop"
+                        "class": "spacingOuterTopSmaller"
                     },
                     {
                         "name": "Outer medium",
@@ -110,11 +138,10 @@
                     },
                     {
                         "name": "Outer large",
-                        "class": "spacingOuterTopLarge"
+                        "class": "spacingOuterTopLarger"
                     }
                 ]
             },
-
             {
                 "name": "Spacing bottom",
                 "type": "Dropdown",
@@ -122,7 +149,7 @@
                 "options": [
                     {
                         "name": "Inner small",
-                        "class": "spacingInnerBottom"
+                        "class": "spacingInnerBottomSmaller"
                     },
                     {
                         "name": "Inner medium",
@@ -130,11 +157,11 @@
                     },
                     {
                         "name": "Inner large",
-                        "class": "spacingInnerBottomLarge"
+                        "class": "spacingInnerBottomLarger"
                     },
                     {
                         "name": "Outer small",
-                        "class": "spacingOuterBottom"
+                        "class": "spacingOuterBottomSmaller"
                     },
                     {
                         "name": "Outer medium",
@@ -142,11 +169,10 @@
                     },
                     {
                         "name": "Outer large",
-                        "class": "spacingOuterBottomLarge"
+                        "class": "spacingOuterBottomLarger"
                     }
                 ]
             },
-
             {
                 "name": "Spacing left",
                 "type": "Dropdown",
@@ -154,7 +180,7 @@
                 "options": [
                     {
                         "name": "Inner small",
-                        "class": "spacingInnerLeft"
+                        "class": "spacingInnerLeftSmaller"
                     },
                     {
                         "name": "Inner medium",
@@ -162,11 +188,11 @@
                     },
                     {
                         "name": "Inner large",
-                        "class": "spacingInnerLeftLarge"
+                        "class": "spacingInnerLeftLarger"
                     },
                     {
                         "name": "Outer small",
-                        "class": "spacingOuterLeft"
+                        "class": "spacingOuterLeftSmaller"
                     },
                     {
                         "name": "Outer medium",
@@ -174,11 +200,10 @@
                     },
                     {
                         "name": "Outer large",
-                        "class": "spacingOuterLeftLarge"
+                        "class": "spacingOuterLeftLarger"
                     }
                 ]
             },
-
             {
                 "name": "Spacing right",
                 "type": "Dropdown",
@@ -186,7 +211,7 @@
                 "options": [
                     {
                         "name": "Inner small",
-                        "class": "spacingInnerRight"
+                        "class": "spacingInnerRightSmaller"
                     },
                     {
                         "name": "Inner medium",
@@ -194,11 +219,11 @@
                     },
                     {
                         "name": "Inner large",
-                        "class": "spacingInnerRightLarge"
+                        "class": "spacingInnerRightLarger"
                     },
                     {
                         "name": "Outer small",
-                        "class": "spacingOuterRight"
+                        "class": "spacingOuterRightSmaller"
                     },
                     {
                         "name": "Outer medium",
@@ -206,11 +231,10 @@
                     },
                     {
                         "name": "Outer large",
-                        "class": "spacingOuterRightLarge"
+                        "class": "spacingOuterRightLarger"
                     }
                 ]
             },
-
             {
                 "name": "Size",
                 "type": "Dropdown",
@@ -226,7 +250,6 @@
                     }
                 ]
             },
-
             {
                 "name": "Background color",
                 "type": "Dropdown",
@@ -239,10 +262,25 @@
                     {
                         "name": "Secondary",
                         "class": "backgroundSecondary"
+                    },
+                    {
+                        "name": "Brand Primary",
+                        "class": "backgroundBrandPrimary"
+                    },
+                    {
+                        "name": "Brand Success",
+                        "class": "backgroundBrandSuccess"
+                    },
+                    {
+                        "name": "Brand Warning",
+                        "class": "backgroundBrandWarning"
+                    },
+                    {
+                        "name": "Brand Danger",
+                        "class": "backgroundBrandDanger"
                     }
                 ]
             },
-
             {
                 "name": "Align",
                 "type": "Dropdown",
@@ -270,26 +308,27 @@
                     }
                 ]
             },
-
             {
                 "name": "Render children horizontal",
                 "type": "Toggle",
                 "description": "Determines the direction in which children are rendered.",
                 "class": "flexRow"
             },
-
             {
                 "name": "Wrap children",
                 "type": "Toggle",
                 "description": "Determines if children can flow into multiple lines if they hit the end of the container.",
                 "class": "flexWrap"
             },
-
             {
                 "name": "Align children",
                 "type": "Dropdown",
                 "description": "Align children in the opposite direction.",
                 "options": [
+                    {
+                        "name": "Start",
+                        "class": "alignChildrenStart"
+                    },
                     {
                         "name": "Center",
                         "class": "alignChildrenCenter"
@@ -308,12 +347,15 @@
                     }
                 ]
             },
-
             {
                 "name": "Justify content",
                 "type": "Dropdown",
                 "description": "Justify content in the active direction.",
                 "options": [
+                    {
+                        "name": "Start",
+                        "class": "justifyContentStart"
+                    },
                     {
                         "name": "Center",
                         "class": "justifyContentCenter"
@@ -337,7 +379,6 @@
                 ]
             }
         ],
-
         "ScrollContainer": [
             {
                 "name": "Spacing top",
@@ -346,7 +387,7 @@
                 "options": [
                     {
                         "name": "Inner small",
-                        "class": "spacingInnerTop"
+                        "class": "spacingInnerTopSmaller"
                     },
                     {
                         "name": "Inner medium",
@@ -354,11 +395,11 @@
                     },
                     {
                         "name": "Inner large",
-                        "class": "spacingInnerTopLarge"
+                        "class": "spacingInnerTopLarger"
                     },
                     {
                         "name": "Outer small",
-                        "class": "spacingOuterTop"
+                        "class": "spacingOuterTopSmaller"
                     },
                     {
                         "name": "Outer medium",
@@ -366,11 +407,10 @@
                     },
                     {
                         "name": "Outer large",
-                        "class": "spacingOuterTopLarge"
+                        "class": "spacingOuterTopLarger"
                     }
                 ]
             },
-
             {
                 "name": "Spacing bottom",
                 "type": "Dropdown",
@@ -378,7 +418,7 @@
                 "options": [
                     {
                         "name": "Inner small",
-                        "class": "spacingInnerBottom"
+                        "class": "spacingInnerBottomSmaller"
                     },
                     {
                         "name": "Inner medium",
@@ -386,11 +426,11 @@
                     },
                     {
                         "name": "Inner large",
-                        "class": "spacingInnerBottomLarge"
+                        "class": "spacingInnerBottomLarger"
                     },
                     {
                         "name": "Outer small",
-                        "class": "spacingOuterBottom"
+                        "class": "spacingOuterBottomSmaller"
                     },
                     {
                         "name": "Outer medium",
@@ -398,11 +438,10 @@
                     },
                     {
                         "name": "Outer large",
-                        "class": "spacingOuterBottomLarge"
+                        "class": "spacingOuterBottomLarger"
                     }
                 ]
             },
-
             {
                 "name": "Spacing left",
                 "type": "Dropdown",
@@ -410,7 +449,7 @@
                 "options": [
                     {
                         "name": "Inner small",
-                        "class": "spacingInnerLeft"
+                        "class": "spacingInnerLeftSmaller"
                     },
                     {
                         "name": "Inner medium",
@@ -418,11 +457,11 @@
                     },
                     {
                         "name": "Inner large",
-                        "class": "spacingInnerLeftLarge"
+                        "class": "spacingInnerLeftLarger"
                     },
                     {
                         "name": "Outer small",
-                        "class": "spacingOuterLeft"
+                        "class": "spacingOuterLeftSmaller"
                     },
                     {
                         "name": "Outer medium",
@@ -430,11 +469,10 @@
                     },
                     {
                         "name": "Outer large",
-                        "class": "spacingOuterLeftLarge"
+                        "class": "spacingOuterLeftLarger"
                     }
                 ]
             },
-
             {
                 "name": "Spacing right",
                 "type": "Dropdown",
@@ -442,7 +480,7 @@
                 "options": [
                     {
                         "name": "Inner small",
-                        "class": "spacingInnerRight"
+                        "class": "spacingInnerRightSmaller"
                     },
                     {
                         "name": "Inner medium",
@@ -450,11 +488,11 @@
                     },
                     {
                         "name": "Inner large",
-                        "class": "spacingInnerRightLarge"
+                        "class": "spacingInnerRightLarger"
                     },
                     {
                         "name": "Outer small",
-                        "class": "spacingOuterRight"
+                        "class": "spacingOuterRightSmaller"
                     },
                     {
                         "name": "Outer medium",
@@ -462,11 +500,10 @@
                     },
                     {
                         "name": "Outer large",
-                        "class": "spacingOuterRightLarge"
+                        "class": "spacingOuterRightLarger"
                     }
                 ]
             },
-
             {
                 "name": "Size",
                 "type": "Dropdown",
@@ -482,7 +519,6 @@
                     }
                 ]
             },
-
             {
                 "name": "Background color",
                 "type": "Dropdown",
@@ -495,10 +531,25 @@
                     {
                         "name": "Secondary",
                         "class": "backgroundSecondary"
+                    },
+                    {
+                        "name": "Brand Primary",
+                        "class": "backgroundBrandPrimary"
+                    },
+                    {
+                        "name": "Brand Success",
+                        "class": "backgroundBrandSuccess"
+                    },
+                    {
+                        "name": "Brand Warning",
+                        "class": "backgroundBrandWarning"
+                    },
+                    {
+                        "name": "Brand Danger",
+                        "class": "backgroundBrandDanger"
                     }
                 ]
             },
-
             {
                 "name": "Align",
                 "type": "Dropdown",
@@ -526,26 +577,27 @@
                     }
                 ]
             },
-
             {
                 "name": "Render children horizontal",
                 "type": "Toggle",
                 "description": "Determines the direction in which children are rendered.",
                 "class": "flexRow"
             },
-
             {
                 "name": "Wrap children",
                 "type": "Toggle",
                 "description": "Determines if children can flow into multiple lines if they hit the end of the container.",
                 "class": "flexWrap"
             },
-
             {
                 "name": "Align children",
                 "type": "Dropdown",
                 "description": "Align children in the opposite direction.",
                 "options": [
+                    {
+                        "name": "Start",
+                        "class": "alignChildrenStart"
+                    },
                     {
                         "name": "Center",
                         "class": "alignChildrenCenter"
@@ -564,12 +616,15 @@
                     }
                 ]
             },
-
             {
                 "name": "Justify content",
                 "type": "Dropdown",
                 "description": "Justify content in the active direction.",
                 "options": [
+                    {
+                        "name": "Start",
+                        "class": "justifyContentStart"
+                    },
                     {
                         "name": "Center",
                         "class": "justifyContentCenter"
@@ -589,7 +644,6 @@
                 ]
             }
         ],
-
         "ActionButton": [
             {
                 "name": "Button style",
@@ -611,10 +665,13 @@
                     {
                         "name": "Danger",
                         "class": "btnDanger"
+                    },
+                    {
+                        "name": "Inversed",
+                        "class": "btnPrimaryInversed"
                     }
                 ]
             },
-
             {
                 "name": "Align",
                 "type": "Dropdown",
@@ -643,7 +700,6 @@
                 ]
             }
         ],
-
         "Image": [
             {
                 "name": "Avatar",
@@ -652,7 +708,6 @@
                 "class": "avatar"
             }
         ],
-
         "DynamicImage": [
             {
                 "name": "Avatar",
@@ -661,7 +716,6 @@
                 "class": "avatar"
             }
         ],
-
         "DynamicText": [
             {
                 "name": "Color",
@@ -718,7 +772,6 @@
                     }
                 ]
             },
-
             {
                 "name": "Size",
                 "type": "Dropdown",
@@ -734,7 +787,6 @@
                     }
                 ]
             },
-
             {
                 "name": "Weight",
                 "type": "Dropdown",
@@ -758,7 +810,6 @@
                     }
                 ]
             },
-
             {
                 "name": "Alignment",
                 "type": "Dropdown",
@@ -779,7 +830,6 @@
                 ]
             }
         ],
-
         "ListView": [
             {
                 "name": "List item divider",
@@ -797,7 +847,6 @@
                 ]
             }
         ],
-
         "TabContainer": [
             {
                 "name": "Tab bar scroll",
@@ -806,7 +855,6 @@
                 "class": "tabContainerScroll"
             }
         ],
-
         "com.mendix.widget.native.activityindicator.ActivityIndicator": [
             {
                 "name": "Activity indicator style",
@@ -828,7 +876,259 @@
                 ]
             }
         ],
-
+        "com.mendix.widget.native.animation.Animation": [
+            {
+                "name": "Spacing top",
+                "type": "Dropdown",
+                "description": "The spacing above this element.",
+                "options": [
+                    {
+                        "name": "Inner small",
+                        "class": "spacingInnerTopSmaller"
+                    },
+                    {
+                        "name": "Inner medium",
+                        "class": "spacingInnerTopMedium"
+                    },
+                    {
+                        "name": "Inner large",
+                        "class": "spacingInnerTopLarger"
+                    },
+                    {
+                        "name": "Outer small",
+                        "class": "spacingOuterTopSmaller"
+                    },
+                    {
+                        "name": "Outer medium",
+                        "class": "spacingOuterTopMedium"
+                    },
+                    {
+                        "name": "Outer large",
+                        "class": "spacingOuterTopLarger"
+                    }
+                ]
+            },
+            {
+                "name": "Spacing bottom",
+                "type": "Dropdown",
+                "description": "The spacing below this element.",
+                "options": [
+                    {
+                        "name": "Inner small",
+                        "class": "spacingInnerBottomSmaller"
+                    },
+                    {
+                        "name": "Inner medium",
+                        "class": "spacingInnerBottomMedium"
+                    },
+                    {
+                        "name": "Inner large",
+                        "class": "spacingInnerBottomLarger"
+                    },
+                    {
+                        "name": "Outer small",
+                        "class": "spacingOuterBottomSmaller"
+                    },
+                    {
+                        "name": "Outer medium",
+                        "class": "spacingOuterBottomMedium"
+                    },
+                    {
+                        "name": "Outer large",
+                        "class": "spacingOuterBottomLarger"
+                    }
+                ]
+            },
+            {
+                "name": "Spacing left",
+                "type": "Dropdown",
+                "description": "The spacing to the left of this element.",
+                "options": [
+                    {
+                        "name": "Inner small",
+                        "class": "spacingInnerLeftSmaller"
+                    },
+                    {
+                        "name": "Inner medium",
+                        "class": "spacingInnerLeftMedium"
+                    },
+                    {
+                        "name": "Inner large",
+                        "class": "spacingInnerLeftLarger"
+                    },
+                    {
+                        "name": "Outer small",
+                        "class": "spacingOuterLeftSmaller"
+                    },
+                    {
+                        "name": "Outer medium",
+                        "class": "spacingOuterLeftMedium"
+                    },
+                    {
+                        "name": "Outer large",
+                        "class": "spacingOuterLeftLarger"
+                    }
+                ]
+            },
+            {
+                "name": "Spacing right",
+                "type": "Dropdown",
+                "description": "The spacing to the right of this element.",
+                "options": [
+                    {
+                        "name": "Inner small",
+                        "class": "spacingInnerRightSmaller"
+                    },
+                    {
+                        "name": "Inner medium",
+                        "class": "spacingInnerRightMedium"
+                    },
+                    {
+                        "name": "Inner large",
+                        "class": "spacingInnerRightLarger"
+                    },
+                    {
+                        "name": "Outer small",
+                        "class": "spacingOuterRightSmaller"
+                    },
+                    {
+                        "name": "Outer medium",
+                        "class": "spacingOuterRightMedium"
+                    },
+                    {
+                        "name": "Outer large",
+                        "class": "spacingOuterRightLarger"
+                    }
+                ]
+            },
+            {
+                "name": "Size",
+                "type": "Dropdown",
+                "description": "Change the size of the widget relative to its sibling(s).",
+                "options": [
+                    {
+                        "name": "Maximum space",
+                        "class": "flexMain"
+                    },
+                    {
+                        "name": "Minimum space",
+                        "class": "flexItem"
+                    }
+                ]
+            },
+            {
+                "name": "Background color",
+                "type": "Dropdown",
+                "description": "Change the background color of the container.",
+                "options": [
+                    {
+                        "name": "Primary",
+                        "class": "backgroundPrimary"
+                    },
+                    {
+                        "name": "Secondary",
+                        "class": "backgroundSecondary"
+                    },
+                    {
+                        "name": "Brand Primary",
+                        "class": "backgroundBrandPrimary"
+                    },
+                    {
+                        "name": "Brand Success",
+                        "class": "backgroundBrandSuccess"
+                    },
+                    {
+                        "name": "Brand Warning",
+                        "class": "backgroundBrandWarning"
+                    },
+                    {
+                        "name": "Brand Danger",
+                        "class": "backgroundBrandDanger"
+                    }
+                ]
+            },
+            {
+                "name": "Align",
+                "type": "Dropdown",
+                "description": "Aligns the element. This overrides 'Align children' of the parent.",
+                "options": [
+                    {
+                        "name": "Stretch",
+                        "class": "alignSelfStretch"
+                    },
+                    {
+                        "name": "Start",
+                        "class": "alignSelfStart"
+                    },
+                    {
+                        "name": "Center",
+                        "class": "alignSelfCenter"
+                    },
+                    {
+                        "name": "End",
+                        "class": "alignSelfEnd"
+                    }
+                ]
+            },
+            {
+                "name": "Render children horizontal",
+                "type": "Toggle",
+                "description": "Determines the direction in which children are rendered.",
+                "class": "flexRow"
+            },
+            {
+                "name": "Wrap children",
+                "type": "Toggle",
+                "description": "Determines if children can flow into multiple lines if they hit the end of the container.",
+                "class": "flexWrap"
+            },
+            {
+                "name": "Align children",
+                "type": "Dropdown",
+                "description": "Align children in the opposite direction.",
+                "options": [
+                    {
+                        "name": "Start",
+                        "class": "alignChildrenStart"
+                    },
+                    {
+                        "name": "Center",
+                        "class": "alignChildrenCenter"
+                    },
+                    {
+                        "name": "End",
+                        "class": "alignChildrenEnd"
+                    },
+                    {
+                        "name": "Stretch",
+                        "class": "alignChildrenStretch"
+                    }
+                ]
+            },
+            {
+                "name": "Justify children",
+                "type": "Dropdown",
+                "description": "Justify children in the active direction.",
+                "options": [
+                    {
+                        "name": "Center",
+                        "class": "justifyChildrenCenter"
+                    },
+                    {
+                        "name": "End",
+                        "class": "justifyChildrenEnd"
+                    },
+                    {
+                        "name": "Space between",
+                        "class": "justifyChildrenSpaceBetween"
+                    },
+                    {
+                        "name": "Space around",
+                        "class": "justifyChildrenSpaceAround"
+                    }
+                ]
+            }
+        ],
         "com.mendix.widget.native.badge.Badge": [
             {
                 "name": "Badge style",
@@ -854,7 +1154,6 @@
                 ]
             }
         ],
-
         "com.mendix.widget.native.floatingactionbutton.FloatingActionButton": [
             {
                 "name": "Style",
@@ -876,7 +1175,23 @@
                 ]
             }
         ],
-
+        "com.mendix.widget.native.listviewswipe.ListViewSwipe": [
+            {
+                "name": "Panel size",
+                "type": "Dropdown",
+                "description": "Size of the left and right panel.",
+                "options": [
+                    {
+                        "name": "Small",
+                        "class": "listViewSwipeSmallPanels"
+                    },
+                    {
+                        "name": "Large",
+                        "class": "listViewSwipeLargePanels"
+                    }
+                ]
+            }
+        ],
         "com.mendix.widget.native.maps.Maps": [
             {
                 "name": "Maps size",
@@ -893,7 +1208,6 @@
                     }
                 ]
             },
-
             {
                 "name": "Maps marker style",
                 "type": "Dropdown",
@@ -914,7 +1228,6 @@
                 ]
             }
         ],
-
         "com.mendix.widget.native.progressbar.ProgressBar": [
             {
                 "name": "Progress bar style",
@@ -935,7 +1248,6 @@
                     }
                 ]
             },
-
             {
                 "name": "Progress bar size",
                 "type": "Dropdown",
@@ -952,7 +1264,6 @@
                 ]
             }
         ],
-
         "com.mendix.widget.native.progresscircle.ProgressCircle": [
             {
                 "name": "Progress circle style",
@@ -974,7 +1285,6 @@
                 ]
             }
         ],
-
         "com.mendix.widget.native.rangeslider.RangeSlider": [
             {
                 "name": "Range Slider style",
@@ -996,7 +1306,6 @@
                 ]
             }
         ],
-
         "com.mendix.widget.native.slider.Slider": [
             {
                 "name": "Slider style",

@@ -23,6 +23,7 @@ public class TestEntity
 		Name("Name"),
 		NumberString("NumberString"),
 		EmailAddress("EmailAddress"),
+		Description("Description"),
 		ReadOnly("ReadOnly");
 
 		private java.lang.String metaName;
@@ -224,6 +225,42 @@ public class TestEntity
 	public final void setEmailAddress(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String emailaddress)
 	{
 		getMendixObject().setValue(context, MemberNames.EmailAddress.toString(), emailaddress);
+	}
+
+	/**
+	 * @return value of Description
+	 */
+	public final java.lang.String getDescription()
+	{
+		return getDescription(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of Description
+	 */
+	public final java.lang.String getDescription(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		return (java.lang.String) getMendixObject().getValue(context, MemberNames.Description.toString());
+	}
+
+	/**
+	 * Set value of Description
+	 * @param description
+	 */
+	public final void setDescription(java.lang.String description)
+	{
+		setDescription(getContext(), description);
+	}
+
+	/**
+	 * Set value of Description
+	 * @param context
+	 * @param description
+	 */
+	public final void setDescription(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String description)
+	{
+		getMendixObject().setValue(context, MemberNames.Description.toString(), description);
 	}
 
 	/**

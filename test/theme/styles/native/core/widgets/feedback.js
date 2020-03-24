@@ -1,4 +1,5 @@
 import { Platform }                                                 from "react-native";
+import { shadeBlendConvert }                                        from "../helpers/_functions/shadeblendconvert.js";
 import { background, border, brand, button, contrast, font, input } from "../variables";
 
 //
@@ -14,7 +15,7 @@ import { background, border, brand, button, contrast, font, input } from "../var
     Default Class For Mendix Feedback Widget
 ========================================================================== */
 
-export const com_mendix_widget_native_feedback_Feedback = (Feedback = {
+export const com_mendix_widget_native_feedback_Feedback = {
     floatingButton: {
         // All ViewStyle properties are allowed
         borderRadius: 0,
@@ -22,7 +23,7 @@ export const com_mendix_widget_native_feedback_Feedback = (Feedback = {
         borderTopLeftRadius: button.borderRadius,
         borderBottomLeftRadius: button.borderRadius,
         elevation: 1.5,
-        shadowColor: contrast.lower,
+        shadowColor: shadeBlendConvert(-0.2, background.primary),
         shadowOpacity: 0.7,
         shadowRadius: 10,
         shadowOffset: {
@@ -37,6 +38,7 @@ export const com_mendix_widget_native_feedback_Feedback = (Feedback = {
     title: {
         // All TextStyle properties are allowed
         color: font.color,
+        fontFamily: font.family,
     },
     textAreaInput: {
         // All TextStyle properties are allowed
@@ -84,4 +86,4 @@ export const com_mendix_widget_native_feedback_Feedback = (Feedback = {
     activityIndicator: {
         color: font.color,
     },
-});
+};

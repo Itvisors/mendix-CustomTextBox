@@ -32,7 +32,38 @@ export const backgroundSecondary = {
         backgroundColor: background.secondary,
     },
 };
+export const backgroundBrandPrimary = {
+    container: {
+        backgroundColor: background.brandPrimary,
+    },
+};
+export const backgroundBrandSuccess = {
+    container: {
+        backgroundColor: background.brandSuccess,
+    },
+};
+export const backgroundBrandWarning = {
+    container: {
+        backgroundColor: background.brandWarning,
+    },
+};
+export const backgroundBrandDanger = {
+    container: {
+        backgroundColor: background.brandDanger,
+    },
+};
+export const backgroundGray = {
+    container: {
+        backgroundColor: background.gray,
+    },
+};
 
+export const borderTop = {
+    container: {
+        borderColor: border.color,
+        borderTopWidth: border.width,
+    },
+};
 export const borderBottom = {
     container: {
         borderColor: border.color,

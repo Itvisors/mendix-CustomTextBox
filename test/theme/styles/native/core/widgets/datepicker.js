@@ -1,4 +1,4 @@
-import { input }                    from "../variables";
+import { font, input }              from "../variables";
 import { TextBox, TextBoxVertical } from "./textbox";
 
 //
@@ -23,6 +23,17 @@ export const DatePicker = {
         // numberOfLines and all TextStyle properties are allowed
         ...TextBox.label,
     },
+    pickerIOS: {
+        // All ViewStyle properties are allowed
+        backgroundColor: input.backgroundColor,
+    },
+    pickerBackdropIOS: {
+        // All ViewStyle properties are allowed
+    },
+    pickerTopIOS: {
+        // All ViewStyle properties are allowed
+        backgroundColor: input.backgroundColor,
+    },
     value: {
         // All TextStyle properties are allowed
         color: input.color,
@@ -30,6 +41,7 @@ export const DatePicker = {
         backgroundColor: input.backgroundColor,
 
         fontSize: input.fontSize,
+        fontFamily: font.family,
         borderWidth: input.borderWidth,
         borderRadius: input.borderRadius,
 
@@ -62,6 +74,7 @@ export const DatePickerVertical = {
         backgroundColor: input.backgroundColor,
 
         fontSize: input.fontSize,
+        fontFamily: font.family,
         borderRadius: input.borderRadius,
         borderWidth: input.borderWidth,
 

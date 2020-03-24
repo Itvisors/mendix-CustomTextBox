@@ -1,6 +1,11 @@
-import { Platform }                                    from "react-native";
-import adjustFont                                      from "../core/helpers/_functions/adjustfont";
-import { setColorBasedOnBackground, setContrastScale } from "../core/helpers/_functions/convertcolors";
+import { NativeModules, Platform } from "react-native";
+import adjustFont                  from "../core/helpers/_functions/adjustfont";
+import {
+    anyColorToRgbString,
+    setColorBasedOnBackground,
+    setContrastScale,
+}                                  from "../core/helpers/_functions/convertcolors";
+import { shadeBlendConvert }       from "../core/helpers/_functions/shadeblendconvert.js";
 
 /*
 ==> You can find a copy of the core variables below. (From styles/native/core/variables.js)
@@ -17,10 +22,16 @@ export const brand = {
     success: "#76CA02",
     warning: "#f99b1d",
     danger: "#ed1c24",
+    primaryLight: `rgba(${anyColorToRgbString("#0595DB")}, 0.14)`,
+    successLight: `rgba(${anyColorToRgbString("#76CA02")}, 0.14)`,
+    warningLight: `rgba(${anyColorToRgbString("#f99b1d")}, 0.14)`,
+    dangerLight: `rgba(${anyColorToRgbString("#ed1c24")}, 0.14)`,
 };
 
-// Dark Mode
-const darkMode = false;
+// Dark Mode - Inherits OS theme if possible
+export const darkMode = NativeModules && NativeModules.RNDarkMode && NativeModules.RNDarkMode.initialMode
+                        ? NativeModules.RNDarkMode.initialMode === "dark"
+                        : false;
 
 // Background Colors
 const backgroundColor = darkMode ? "#000" : "#FFF";
@@ -61,9 +72,9 @@ export const font = {
     sizeH5: adjustFont(14),
     sizeH6: adjustFont(12),
     color: setColorBasedOnBackground(background.primary),
-    weightLight: "100",
+    weightLight: "100",  // Only supported on iOS, will be 'Normal' on Android
     weightNormal: "normal",
-    weightSemiBold: "600",
+    weightSemiBold: "600", // Only supported on iOS, will be 'Bold' on Android
     weightBold: "bold",
     family: Platform.select({ ios: "System", android: "normal" }),
 };
@@ -82,19 +93,22 @@ export const spacing = {
 // Button Styles
 export const button = {
     fontSize: font.sizeSmall,
+    fontSizeLarge: font.size,
+    fontWeight: font.weightBold,
     fontSizeIcon: font.sizeSmall,
+    fontSizeIconLarge: font.size,
     borderRadius: border.radius,
-    paddingVertical: Platform.select({ android: spacing.smaller, ios: spacing.smaller }),
-    paddingHorizontal: Platform.select({ android: spacing.small, ios: spacing.regular }),
+    paddingVertical: spacing.smaller,
+    paddingHorizontal: spacing.regular,
 
     header: {
-        color: brand.primary,
+        color: contrast.highest,
         borderColor: "transparent",
         backgroundColor: "transparent",
-        fontSize: font.size,
-        fontSizeIcon: font.size,
-        paddingVertical: 0,
-        paddingHorizontal: 0,
+        fontSize: font.sizeSmall,
+        fontSizeIcon: font.sizeSmall,
+        paddingLeft: 0,
+        paddingRight: 10,
     },
     primary: {
         color: "#FFF",
@@ -105,6 +119,7 @@ export const button = {
         color: brand.primary,
         borderColor: brand.primary,
         backgroundColor: "transparent",
+        inversedColor: "#FFF",
     },
     success: {
         color: "#FFF",
@@ -144,21 +159,53 @@ export const input = {
 
     // Alignment
     textAlign: "left",
-    paddingHorizontal: spacing.small,
+    paddingHorizontal: spacing.smaller,
     paddingVertical: spacing.small,
 };
 
 // Navigation Styles
 export const navigation = {
+    statusBar: {
+        backgroundColor: background.primary,
+        barStyle: darkMode ? "light-content" : "dark-content",
+    },
     topBar: {
         backgroundColor: background.primary,
         backButtonColor: contrast.highest,
         titleColor: contrast.highest,
+        titleFontSize: Platform.select({ android: font.sizeH4, ios: font.sizeH5 }),
     },
     bottomBar: {
         color: contrast.high,
-        selectedColor: brand.primary,
+        selectedTextColor: contrast.high,
+        selectedIconColor: brand.primary,
         backgroundColor: background.primary,
+        fontSize: font.sizeSmall,
+        iconSize: font.sizeSmall,
+    },
+    progressOverlay: {
+        color: font.color,
+        activityIndicatorColor: font.color,
+        backgroundColor: `rgba(0, 0, 0, 0.5)`,
+        containerBackgroundColor: background.secondary,
+        shadowColor: shadeBlendConvert(-0.6, background.primary), // Only for iOS
+        fontSize: font.size,
+    },
+};
+
+// Tabcontainer Styles
+export const tabcontainer = {
+    tabBar: {
+        pressColor: contrast.lower,
+        backgroundColor: background.primary,
+    },
+    indicator: {
+        backgroundColor: brand.primary,
+        height: Platform.select({ ios: 2, android: 2 }),
+    },
+    label: {
+        color: contrast.highest,
+        fontWeight: font.weightBold,
     },
 };
 
@@ -167,5 +214,42 @@ export const listview = {
     border: {
         color: border.color,
         width: border.width,
+    },
+};
+
+// Layoutgrid Styles
+export const layoutgrid = {
+    gutterSize: 15,
+};
+
+
+//## Pluggable Widgets
+//-------------------------------------------------------------------------------------------------------------------//
+// Badge Styles
+export const badge = {
+    fontWeight: font.weightBold,
+    borderRadius: 30,
+    paddingVertical: 3,
+    paddingHorizontal: spacing.smaller,
+
+    default: {
+        color: contrast.higher,
+        backgroundColor: contrast.lower,
+    },
+    primary: {
+        color: brand.primary,
+        backgroundColor: brand.primaryLight,
+    },
+    success: {
+        color: brand.success,
+        backgroundColor: brand.successLight,
+    },
+    warning: {
+        color: brand.warning,
+        backgroundColor: brand.warningLight,
+    },
+    danger: {
+        color: brand.danger,
+        backgroundColor: brand.dangerLight,
     },
 };

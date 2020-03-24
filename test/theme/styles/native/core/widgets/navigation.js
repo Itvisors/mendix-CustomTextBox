@@ -1,5 +1,4 @@
-import { Platform }                                      from "react-native";
-import { background, brand, contrast, font, navigation } from "../variables";
+import { border, font, navigation, spacing } from "../variables";
 
 //
 // DISCLAIMER:
@@ -9,23 +8,72 @@ import { background, brand, contrast, font, navigation } from "../variables";
 //
 
 /* ==========================================================================
-    TopBar / BottomBar
+    TopBar / BottomBar / ProgressOverlay
 
-    Default Class For Mendix TopBar / BottomBar
+    Default Class For Mendix TopBar, BottomBar and ProgressOverlay
 ========================================================================== */
 
 export const navigationStyle = {
-    topBar: {
-        backgroundColor: navigation.topBar.backgroundColor,
-        backButtonColor: navigation.topBar.backButtonColor,
-        titleColor: navigation.topBar.titleColor,
-        titleFontSize: font.sizeH4,
-        fontWeight: Platform.select({ ios: font.weightBold, android: font.weightNormal }),
-    },
     bottomBar: {
-        fontSize: font.sizeSmall,
-        backgroundColor: navigation.bottomBar.backgroundColor,
-        color: navigation.bottomBar.color,
-        selectedColor: navigation.bottomBar.selectedColor,
+        container: {
+            // All ViewStyle properties are allowed
+            backgroundColor: navigation.bottomBar.backgroundColor,
+        },
+        label: {
+            // All TextStyle properties are allowed
+            color: navigation.bottomBar.color,
+            fontFamily: font.family,
+            fontSize: navigation.bottomBar.fontSize,
+
+        },
+        selectedLabel: {
+            // All TextStyle properties are allowed
+            color: navigation.bottomBar.selectedTextColor,
+            fontFamily: font.family,
+            fontSize: navigation.bottomBar.fontSize,
+        },
+        icon: {
+            // All TextStyle properties are allowed
+            color: navigation.bottomBar.color,
+            fontSize: navigation.bottomBar.iconSize,
+        },
+        selectedIcon: {
+            // All TextStyle properties are allowed
+            color: navigation.bottomBar.selectedIconColor,
+            fontSize: navigation.bottomBar.iconSize,
+        },
+    },
+    progressOverlay: {
+        background: {
+            // All ViewStyle properties are allowed
+            backgroundColor: navigation.progressOverlay.backgroundColor,
+        },
+        container: {
+            // All ViewStyle properties are allowed
+            backgroundColor: navigation.progressOverlay.containerBackgroundColor,
+            paddingHorizontal: spacing.largest,
+            paddingVertical: spacing.large,
+            borderRadius: border.radius,
+            elevation: 1.5,
+            shadowColor: navigation.progressOverlay.shadowColor,
+            shadowOpacity: 0.7,
+            shadowRadius: 10,
+            shadowOffset: {
+                width: 0,
+                height: 2,
+            },
+
+        },
+        activityIndicator: {
+            // Color, Size & All ViewStyle properties are allowed
+            color: navigation.progressOverlay.activityIndicatorColor,
+        },
+        text: {
+            // All TextStyle properties are allowed
+            color: navigation.progressOverlay.color,
+            marginTop: spacing.small,
+            fontFamily: font.family,
+            fontSize: navigation.progressOverlay.fontSize,
+        },
     },
 };

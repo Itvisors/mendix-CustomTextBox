@@ -1,23 +1,11 @@
 import { Platform }                              from "react-native";
+import { shadeBlendConvert }                     from "../../../core/helpers/_functions/shadeblendconvert.js";
 import { background, border, contrast, spacing } from "../../../core/variables";
 
 /* ==========================================================================
     Cards
 
 ========================================================================== */
-
-export const cardShadow = {
-    container: {
-        elevation: 1.5,
-        shadowColor: contrast.lower,
-        shadowOpacity: 0.7,
-        shadowRadius: 10,
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-    },
-};
 
 export const card = {
     container: {
@@ -31,38 +19,21 @@ export const card = {
                 borderColor: contrast.lowest,
             },
         }),
-        ...cardShadow.container,
+        elevation: 1.5,
+        shadowColor: shadeBlendConvert(-0.2, background.primary),
+        shadowOpacity: 0.7,
+        shadowRadius: 10,
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
     },
 };
 
 //== Elements
 //-------------------------------------------------------------------------------------------------------------------//
 
-//== Variations
-//-------------------------------------------------------------------------------------------------------------------//
-// Card Action
-export const cardAction = {
-    container: {
-        flex: 1,
-        flexBasis: "40%",
-        aspectRatio: 1,
-        borderWidth: 1,
-        borderColor: border.color,
-        borderRadius: border.radius,
-        padding: spacing.regular,
-    },
-};
-
-export const cardActionImage = {
-    image: {
-        maxHeight: 70,
-        resizeMode: "contain",
-    },
-};
-
-//-------------------------------------------------------------------------------------------------------------------//
-// Card Product
-export const cardProductImage = {
+export const cardImage = {
     container: {
         overflow: "hidden",
         borderTopLeftRadius: border.radius,
@@ -70,20 +41,24 @@ export const cardProductImage = {
     },
     image: {
         width: "100%",
-        height: 250,
+        height: 200,
         resizeMode: "cover",
     },
 };
-export const cardProductImageFull = {
+export const cardImageFull = {
     container: {
-        ...cardProductImage.container,
+        ...cardImage.container,
         borderBottomLeftRadius: border.radius,
         borderBottomRightRadius: border.radius,
     },
-    image: cardProductImage.image,
+    image: {
+        width: "100%",
+        height: 300,
+        resizeMode: "cover",
+    },
 };
 
-export const cardProductBody = {
+export const cardBody = {
     container: {
         position: "absolute",
         end: 0,
@@ -93,13 +68,25 @@ export const cardProductBody = {
     },
 };
 
-export const cardRating = {
+//== Variations
+//-------------------------------------------------------------------------------------------------------------------//
+// Card Action
+export const cardAction = {
     container: {
-        flexShrink: 1,
-        justifyContent: "flex-start",
+        maxWidth: "100%",
+        aspectRatio: 1,
+        borderWidth: 1,
+        borderColor: border.color,
+        borderRadius: border.radius,
+        padding: spacing.regular,
+        alignItems: "center",
     },
-    icon: {
-        size: 18,
+};
+
+export const cardActionImage = {
+    image: {
+        maxHeight: 70,
+        resizeMode: "contain",
     },
 };
 

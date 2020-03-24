@@ -27,6 +27,18 @@
             </enumerationValues>
         </property>
 
+        <property key="multiLine" type="boolean" defaultValue="false">
+            <caption>Multiline</caption>
+            <category>Configuration</category>
+            <description></description>
+        </property>
+
+        <property key="numberOfLines" type="integer" defaultValue="5">
+            <caption>Number of lines</caption>
+            <category>Configuration</category>
+            <description>For multiline, the number of lines to show</description>
+        </property>
+
         <property key="showAsPassword" type="boolean" defaultValue="false">
             <caption>Show as password</caption>
             <category>Configuration</category>

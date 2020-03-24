@@ -13,15 +13,22 @@ import { brand } from "../variables";
     Default Class For Mendix Maps Widget
 ========================================================================== */
 
-export const com_mendix_widget_native_maps_Maps = (Maps = {
+export const com_mendix_widget_native_maps_Maps = {
     container: {
         // All ViewStyle properties are allowed
         alignSelf: "stretch",
         aspectRatio: 4 / 3,
     },
+    loadingOverlay: {
+        // All ViewStyle properties are allowed
+    },
+    loadingIndicator: {
+        // Only color is allowed
+        color: brand.primary,
+    },
     marker: {
-        //Only color & opacity are allowed
+        // Only color & opacity are allowed
         color: brand.primary,
         opacity: 1,
     },
-});
+};

@@ -10,6 +10,8 @@ export interface InputProps {
     editable: boolean;
     hasError: boolean;
     keyboardType: KeyboardType;
+    multiLine: boolean;
+    numberOfLines: number;
     showAsPassword: boolean;
     onUpdate: (value: string) => void;
 }
@@ -40,7 +42,12 @@ export class CustomTextInput extends Component<InputProps> {
                     style={inputStyle}
                     value={this.props.value}
                     keyboardType={this.props.keyboardType}
+                    autoCorrect={false}
+                    autoCompleteType={"off"}
+                    textContentType={"none"}
                     editable={this.props.editable}
+                    multiline={this.props.multiLine}
+                    numberOfLines={this.props.numberOfLines}
                     clearButtonMode={"while-editing"}
                     secureTextEntry={this.props.showAsPassword}
                     onChangeText={this.props.onUpdate}

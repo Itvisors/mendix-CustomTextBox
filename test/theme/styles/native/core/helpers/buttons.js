@@ -1,5 +1,5 @@
-import merge                             from "./_functions/mergeobjects";
 import { brand, button, contrast, font } from "../variables";
+import merge                             from "./_functions/mergeobjects";
 
 //
 // DISCLAIMER:
@@ -63,12 +63,36 @@ export const btnDanger = {
         color: button.danger.color,
     },
 };
+export const btnPrimaryInversed = {
+    container: {
+        borderColor: button.primary.color,
+        backgroundColor: button.primary.color,
+    },
+    icon: {
+        color: button.primary.backgroundColor,
+    },
+    caption: {
+        color: button.primary.backgroundColor,
+    },
+};
 
 //== Extra Classes
 //## Helper classes to change the look and feel of the widget
 //-------------------------------------------------------------------------------------------------------------------//
-// Button Icon Only
+export const btnSecondaryInversed = {
+    container: {
+        borderColor: button.secondary.inversedColor,
+        backgroundColor: button.secondary.backgroundColor,
+    },
+    icon: {
+        color: button.secondary.inversedColor,
+    },
+    caption: {
+        color: button.secondary.inversedColor,
+    },
+};
 
+// Button Icon Only
 export const btnIconPrimary = {
     container: {
         borderWidth: 0,
@@ -85,7 +109,7 @@ export const btnIconPrimary = {
 };
 export const btnIconSecondary = merge(btnIconPrimary, {
     icon: {
-        color: contrast.lower,
+        color: contrast.regular,
     },
 });
 export const btnIconSuccess = merge(btnIconPrimary, {
@@ -103,7 +127,50 @@ export const btnIconDanger = merge(btnIconPrimary, {
         color: button.danger.backgroundColor,
     },
 });
+export const btnIconWhite = merge(btnIconPrimary, {
+    icon: {
+        color: "#FFF",
+    },
+});
 
+export const btnIconGrayRounded = {
+    container: {
+        flex: 0,
+        padding: 10,
+        borderRadius: 20,
+        borderWidth: 0,
+        backgroundColor: contrast.lower,
+    },
+    icon: {
+        size: 30,
+        color: contrast.higher,
+    },
+    caption: {
+        fontSize: 0,
+    },
+};
+
+// Round Button Icon With Background
+export const btnIconPrimaryBackground = {
+    container: {
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        paddingVertical: 0,
+        paddingHorizontal: 0,
+    },
+    icon: {
+        width: "100%",
+        height: "100%",
+        alignItems: "center",
+        justifyContent: "center",
+        size: button.fontSizeIconLarge,
+        color: button.primary.color,
+    },
+};
+
+
+// Text only
 export const btnAsText = {
     container: {
         maxHeight: 22,
@@ -117,11 +184,21 @@ export const btnAsText = {
     icon: {
         color: brand.primary,
         fontWeight: font.weightSemiBold,
-        fontSize: button.fontSizeIcon,
+        size: button.fontSizeIcon,
     },
     caption: {
         color: brand.primary,
         fontWeight: font.weightSemiBold,
         fontSize: button.fontSize,
+    },
+};
+
+// Button sizes
+export const btnLarge = {
+    icon: {
+        size: button.fontSizeIconLarge,
+    },
+    caption: {
+        fontSize: button.fontSizeLarge,
     },
 };

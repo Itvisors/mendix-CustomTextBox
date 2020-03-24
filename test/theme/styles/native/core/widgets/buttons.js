@@ -1,4 +1,4 @@
-import { button, contrast } from "../variables";
+import { button, contrast, font } from "../variables";
 
 //
 // DISCLAIMER:
@@ -28,7 +28,7 @@ export const ActionButton = {
         paddingHorizontal: button.paddingHorizontal,
     },
     icon: {
-        // Size, Color and all ViewStyle properties are allowed
+        // Size and color are allowed
         color: button.primary.color,
         size: button.fontSizeIcon,
     },
@@ -36,6 +36,8 @@ export const ActionButton = {
         // All TextStyle properties are allowed
         color: button.primary.color,
         fontSize: button.fontSize,
+        fontFamily: font.family,
+        fontWeight: button.fontWeight,
     },
 };
 
@@ -44,8 +46,9 @@ export const ActionButtonHeader = {
     container: {
         borderColor: button.header.borderColor,
         backgroundColor: button.header.backgroundColor,
-        paddingVertical: button.header.paddingVertical,
-        paddingHorizontal: button.header.paddingHorizontal,
+        paddingLeft: button.header.paddingLeft,
+        paddingRight: button.header.paddingRight,
+
     },
     icon: {
         color: button.header.color,
@@ -54,5 +57,6 @@ export const ActionButtonHeader = {
     caption: {
         color: button.header.color,
         fontSize: button.header.fontSize,
+        fontFamily: font.family,
     },
 };

@@ -70,7 +70,6 @@
 select.form-control {
     $arrow: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15px' height='8px'><polyline id='Line' fill='none' stroke='%23555555' points='0.5 0.5 6 6 11.545361 0.5'></polyline></svg>";
     padding-right: 30px;
-    padding-left: 30px;
     background-image: url($arrow);
     background-repeat: no-repeat;
     background-position: calc(100% - #{$form-input-padding-x}) center;
@@ -80,9 +79,9 @@ select.form-control {
 }
 
 .form-control.mx-selectbox {
+    align-items: center;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
 }
 
 // Not editable textarea, textarea will be rendered as a label
@@ -91,7 +90,7 @@ select.form-control {
 }
 
 textarea.form-control {
-    height: auto;
+    flex-basis: auto;
 }
 
 .mx-compound-control {
@@ -170,7 +169,7 @@ textarea.form-control {
     transform: translateZ(0);
 }
 
-@media only screen and (min-width: $screen-sm) {
+@media only screen and (min-width: $screen-md) {
     .form-horizontal {
         .control-label {
             margin-bottom: 0;
@@ -178,6 +177,12 @@ textarea.form-control {
             padding-bottom: $form-input-padding-y;
             line-height: $form-input-line-height;
         }
+    }
+}
+
+@media only screen and (max-width: $screen-sm-max) {
+    .form-group {
+        flex-direction: column;
     }
 }
 
@@ -216,8 +221,8 @@ textarea.form-control {
 [dir='rtl'] {
     // Dropdown input widget
     select.form-control {
+        padding-left: 0;
         padding-right: 30px;
-        padding-left: 30px;
         background-position: #{$form-input-padding-x} center;
     }
 }

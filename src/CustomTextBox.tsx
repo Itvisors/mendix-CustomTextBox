@@ -17,34 +17,35 @@ export interface CustomTextBoxStyle extends Style {
 export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxStyle>> {
     private readonly onUpdateHandle = this.onUpdate.bind(this);
     render(): ReactNode {
-        let value;
-        let keyboardType: KeyboardType = "default";
-        if (this.props.dataAttr.status == ValueStatus.Available) {
-            value = this.props.dataAttr.displayValue || "";
-            switch (this.props.keyboardType) {
-                case "numeric":
-                    keyboardType = "numeric";
-                    break;
-                case "emailAddress":
-                    keyboardType = "email-address";
-                    break;
-            }
-        } else {
-            value = "";
+        const { dataAttr } = this.props;
+        if (dataAttr.status !== ValueStatus.Available) {
+            return null;
         }
-        const editable = this.props.dataAttr.status == ValueStatus.Available &&!this.props.dataAttr.readOnly;
+        // Keyboard type wants values with dashes, which Mendix does not allow.
+        let keyboardType: KeyboardType = "default";
+        switch (this.props.keyboardType) {
+            case "numeric":
+                keyboardType = "numeric";
+                break;
+            case "emailAddress":
+                keyboardType = "email-address";
+                break;
+        }
+        
         let validation = undefined;
-        if (this.props.dataAttr.validation) {
-            validation = "" + this.props.dataAttr.validation;
+        if (dataAttr.validation) {
+            validation = "" + dataAttr.validation;
         }
         return (
             <View>
                 <CustomTextInput
-                    value={value}
+                    value={dataAttr.displayValue}
                     style={this.props.style}
-                    editable={editable}
+                    editable={!dataAttr.readOnly}
                     hasError={!!this.props.dataAttr.validation}
                     keyboardType={keyboardType}
+                    multiLine={this.props.multiLine}
+                    numberOfLines={this.props.numberOfLines}
                     showAsPassword={this.props.showAsPassword}
                     onUpdate={this.onUpdateHandle}
                 />
@@ -52,7 +53,7 @@ export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxSty
                     validationMessage={validation}
                     style={this.props.style}
                     >
-                /></ValidationErrorView>
+                </ValidationErrorView>
             </View>
         );
     }
