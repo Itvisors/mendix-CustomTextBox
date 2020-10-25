@@ -58,6 +58,10 @@ export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxSty
         );
     }
     private onUpdate(value: string): void {
-        this.props.dataAttr.setValue(value);
+        const { dataAttr, onChangeAction } = this.props;
+        dataAttr.setValue(value);
+        if (onChangeAction && onChangeAction.canExecute && !onChangeAction.isExecuting) {
+            onChangeAction.execute();
+        }
     }
 }

@@ -45,6 +45,12 @@
             <description></description>
         </property>
 
+        <property key="onChangeAction" type="action" required="false">
+            <caption>On change action</caption>
+            <category>Configuration</category>
+            <description>The onChange fires with every character entered</description>
+        </property>
+
         <systemProperty key="Visibility"/>
         <systemProperty key="Editability"/>
     </properties>

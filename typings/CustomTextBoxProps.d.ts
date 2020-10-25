@@ -3,7 +3,7 @@
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix Widgets Team
  */
-import { EditableValue } from "mendix";
+import { ActionValue, EditableValue } from "mendix";
 
 interface CommonProps<Style> {
     name: string;
@@ -18,4 +18,5 @@ export interface CustomTextBoxProps<Style> extends CommonProps<Style> {
     multiLine: boolean;
     numberOfLines: number;
     showAsPassword: boolean;
+    onChangeAction?: ActionValue;
 }
