@@ -14,6 +14,7 @@ export interface CustomTextBoxProps<Style> {
     keyboardType: KeyboardTypeEnum;
     multiLine: boolean;
     numberOfLines: number;
+    autoFocus: boolean;
     showAsPassword: boolean;
     onChangeAction?: ActionValue;
 }
@@ -25,6 +26,7 @@ export interface CustomTextBoxPreviewProps {
     keyboardType: KeyboardTypeEnum;
     multiLine: boolean;
     numberOfLines: number | null;
+    autoFocus: boolean;
     showAsPassword: boolean;
     onChangeAction: {} | null;
 }

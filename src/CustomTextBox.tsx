@@ -31,8 +31,8 @@ export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxSty
                 keyboardType = "email-address";
                 break;
         }
-        
-        let validation = undefined;
+
+        let validation;
         if (dataAttr.validation) {
             validation = "" + dataAttr.validation;
         }
@@ -46,14 +46,11 @@ export class CustomTextBox extends Component<CustomTextBoxProps<CustomTextBoxSty
                     keyboardType={keyboardType}
                     multiLine={this.props.multiLine}
                     numberOfLines={this.props.numberOfLines}
+                    autoFocus={this.props.autoFocus}
                     showAsPassword={this.props.showAsPassword}
                     onUpdate={this.onUpdateHandle}
                 />
-                <ValidationErrorView
-                    validationMessage={validation}
-                    style={this.props.style}
-                    >
-                </ValidationErrorView>
+                <ValidationErrorView validationMessage={validation} style={this.props.style}></ValidationErrorView>
             </View>
         );
     }

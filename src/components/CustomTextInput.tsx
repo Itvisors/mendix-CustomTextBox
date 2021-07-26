@@ -1,8 +1,8 @@
-import { Component, ReactNode, createElement } from 'react';
-import { TextInput, View, KeyboardType } from 'react-native';
-import { CustomTextBoxStyle } from '../CustomTextBox';
-import { flattenStyles } from '../utils/common';
-import { styles } from '../ui/styles';
+import { Component, ReactNode, createElement } from "react";
+import { TextInput, View, KeyboardType } from "react-native";
+import { CustomTextBoxStyle } from "../CustomTextBox";
+import { flattenStyles } from "../utils/common";
+import { styles } from "../ui/styles";
 
 export interface InputProps {
     value: string;
@@ -12,6 +12,7 @@ export interface InputProps {
     keyboardType: KeyboardType;
     multiLine: boolean;
     numberOfLines: number;
+    autoFocus: boolean;
     showAsPassword: boolean;
     onUpdate: (value: string) => void;
 }
@@ -31,18 +32,19 @@ export class CustomTextInput extends Component<InputProps> {
         if (this.props.editable) {
             inputStyle = this.styles.input;
         } else {
-            inputStyle = {...this.styles.input, ...this.styles.inputDisabled };
+            inputStyle = { ...this.styles.input, ...this.styles.inputDisabled };
         }
         if (this.props.hasError) {
-            inputStyle = {...inputStyle, ...this.styles.inputError };
+            inputStyle = { ...inputStyle, ...this.styles.inputError };
         }
         return (
             <View style={this.styles.container}>
-                <TextInput 
+                <TextInput
                     style={inputStyle}
                     value={this.props.value}
                     keyboardType={this.props.keyboardType}
                     autoCorrect={false}
+                    autoFocus={this.props.autoFocus}
                     autoCompleteType={"off"}
                     textContentType={"none"}
                     editable={this.props.editable}
