@@ -6,7 +6,7 @@
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
 // Other code you write will be lost the next time you deploy the project.
 import { Big } from "big.js";
-import UrlParse from "url-parse";
+import UrlParse from 'url-parse';
 
 // BEGIN EXTRA CODE
 async function createParamObject(entity, url) {
@@ -22,12 +22,12 @@ async function createParamObject(entity, url) {
 }
 function splitUrlToObject(url) {
     const urlObject = new UrlParse(url);
+    const parsedUrlObject = new UrlParse(url, true);
     const queryValues = {};
-    const query = urlObject.query;
+    const query = parsedUrlObject.query;
     for (const [key, value] of Object.entries(query)) {
         queryValues[key.toLowerCase()] = value !== undefined ? value : "";
     }
-    console.log("query", queryValues);
     const paths = urlObject.pathname
         .replace(/^\/*/, "")
         .split("/")
@@ -36,7 +36,12 @@ function splitUrlToObject(url) {
         return acc;
     }, {});
     const hash = url.split("#")[1] || "";
-    return Object.assign(Object.assign(Object.assign(Object.assign({}, urlObject), { hash }), paths), queryValues);
+    return {
+        ...urlObject,
+        hash,
+        ...paths,
+        ...queryValues
+    };
 }
 function createMxObject(entity) {
     return new Promise((resolve, reject) => {

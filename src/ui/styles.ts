@@ -1,9 +1,6 @@
-import { NativeModules, StyleSheet } from "react-native";
+import { Appearance, StyleSheet } from "react-native";
 
-const darkMode =
-    NativeModules && NativeModules.RNDarkMode && NativeModules.RNDarkMode.initialMode
-        ? NativeModules.RNDarkMode.initialMode === "dark"
-        : false;
+const darkMode = Appearance.getColorScheme() === "dark";
 
 export const styles: any = StyleSheet.create({
     flex: {
@@ -14,7 +11,7 @@ export const styles: any = StyleSheet.create({
         flex: 1,
         padding: 15,
         fontSize: 17.5,
-        borderColor: darkMode ? "#333333" : "#cdcdcd", 
+        borderColor: darkMode ? "#333333" : "#cdcdcd",
         borderWidth: 1,
         borderRadius: 5,
         backgroundColor: darkMode ? "#000" : "#FFF",
@@ -24,7 +21,7 @@ export const styles: any = StyleSheet.create({
         backgroundColor: darkMode ? "#141414" : "#f3f3f3"
     },
     inputError: {
-        borderColor: "#ed1c24", 
+        borderColor: "#ed1c24",
         color: "#ed1c24"
     },
     validationMessage: {

@@ -1,22 +1,30 @@
 /**
  * This file was generated from CustomTextBox.xml
  * WARNING: All changes made to this file will be overwritten
- * @author Mendix Widgets Team
+ * @author Mendix UI Content Team
  */
 import { ActionValue, EditableValue } from "mendix";
 
-interface CommonProps<Style> {
-    name: string;
-    style: Style[];
-}
-
 export type KeyboardTypeEnum = "default" | "numeric" | "emailAddress";
 
-export interface CustomTextBoxProps<Style> extends CommonProps<Style> {
+export interface CustomTextBoxProps<Style> {
+    name: string;
+    style: Style[];
     dataAttr: EditableValue<string>;
     keyboardType: KeyboardTypeEnum;
     multiLine: boolean;
     numberOfLines: number;
     showAsPassword: boolean;
     onChangeAction?: ActionValue;
+}
+
+export interface CustomTextBoxPreviewProps {
+    class: string;
+    style: string;
+    dataAttr: string;
+    keyboardType: KeyboardTypeEnum;
+    multiLine: boolean;
+    numberOfLines: number | null;
+    showAsPassword: boolean;
+    onChangeAction: {} | null;
 }

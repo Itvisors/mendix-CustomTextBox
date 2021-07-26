@@ -5,34 +5,30 @@
   "description": "Custom text box",
   "copyright": "ITvisors 2019",
   "author": "Marcel Groeneweg",
+  "engines": {
+    "node": ">=12"
+  },
   "config": {
-    "widgetPath": "./test/widgets",
     "projectPath": "./test/"
   },
   "packagePath": "itvisors",
   "scripts": {
-    "start": "npm run dev",
-    "build": "pluggable-widgets-tools build:ts:native",
-    "dev": "pluggable-widgets-tools start:ts:native",
+    "start": "pluggable-widgets-tools start:native",
+    "build": "pluggable-widgets-tools build:native",
     "lint": "pluggable-widgets-tools lint",
     "lint:fix": "pluggable-widgets-tools lint:fix",
     "prerelease": "npm run lint",
-    "release": "pluggable-widgets-tools release:ts:native"
+    "release": "pluggable-widgets-tools release:native"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Marcel Groeneweg/customtextbox/issues"
+    "url": "https://github.com/Itvisors/mendix-CustomTextBox/issues"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^8.6.0",
-    "@types/big.js": "^4.0.5",
-    "@types/classnames": "^2.2.6",
-    "@types/jest": "^24.0.0",
-    "@types/react": "^16.8.17",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-native": "^0.57.56"
+    "@mendix/pluggable-widgets-tools": "^9.0.0",
+    "@types/big.js": "^6.0.2",
+    "@types/react": "~17.0.1",
+    "@types/react-native": "~0.63.52"
   },
-  "dependencies": {
-    "big.js": "^5.2.2"
-  }
+  "dependencies": {}
 }
