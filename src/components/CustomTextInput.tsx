@@ -14,7 +14,9 @@ export interface InputProps {
     numberOfLines: number;
     autoFocus: boolean;
     showAsPassword: boolean;
+    onFocus: () => void;
     onUpdate: (value: string) => void;
+    onBlur: () => void;
 }
 
 const defaultTextInputStyle: CustomTextBoxStyle = {
@@ -52,7 +54,9 @@ export class CustomTextInput extends Component<InputProps> {
                     numberOfLines={this.props.multiLine ? this.props.numberOfLines : 1}
                     clearButtonMode={"while-editing"}
                     secureTextEntry={this.props.showAsPassword}
+                    onFocus={this.props.onFocus}
                     onChangeText={this.props.onUpdate}
+                    onBlur={this.props.onBlur}
                 />
             </View>
         );

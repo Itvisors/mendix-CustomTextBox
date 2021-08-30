@@ -51,10 +51,22 @@
             <description></description>
         </property>
 
+        <property key="onFocusAction" type="action" required="false">
+            <caption>On focus action</caption>
+            <category>Configuration</category>
+            <description>The onFocus fires when the component receives focus</description>
+        </property>
+
         <property key="onChangeAction" type="action" required="false">
             <caption>On change action</caption>
             <category>Configuration</category>
             <description>The onChange fires with every character entered</description>
+        </property>
+
+        <property key="onBlurAction" type="action" required="false">
+            <caption>On blur action</caption>
+            <category>Configuration</category>
+            <description>The onBlur fires when the component is blurred (looses focus)</description>
         </property>
 
         <systemProperty key="Visibility"/>

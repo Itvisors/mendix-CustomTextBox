@@ -16,7 +16,9 @@ export interface CustomTextBoxProps<Style> {
     numberOfLines: number;
     autoFocus: boolean;
     showAsPassword: boolean;
+    onFocusAction?: ActionValue;
     onChangeAction?: ActionValue;
+    onBlurAction?: ActionValue;
 }
 
 export interface CustomTextBoxPreviewProps {
@@ -28,5 +30,7 @@ export interface CustomTextBoxPreviewProps {
     numberOfLines: number | null;
     autoFocus: boolean;
     showAsPassword: boolean;
+    onFocusAction: {} | null;
     onChangeAction: {} | null;
+    onBlurAction: {} | null;
 }
