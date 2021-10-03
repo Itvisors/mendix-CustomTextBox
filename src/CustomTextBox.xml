@@ -5,7 +5,7 @@
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Custom Text Box</name>
     <description>Custom text box</description>
-    <icon/>
+    <studioProCategory>Input elements</studioProCategory>
     <properties>
         <property key="dataAttr" type="attribute">
             <caption>Attribute</caption>
